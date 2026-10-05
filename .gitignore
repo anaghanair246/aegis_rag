@@ -28,12 +28,6 @@ Thumbs.db
 # Logs
 *.log
 
-# Generated databases
-*.db
-
-# Python pickle/index files
-*.pkl
-
 # Temporary files
 *.tmp
 *.temp
