@@ -2,7 +2,7 @@
 
 ## 🚀 Live Demo
 
-👉 **[TRY THE LIVE AEGIS Q&A APP →](https://aegisrag-g65yxpinj4yewrt2jx h2fu9.streamlit.app/)**
+👉 **[TRY THE LIVE AEGIS Q&A APP →](https://aegisrag-g65yxpjn4yewr2tjxh2fu9.streamlit.app/) **
 
 Offline-by-default RAG-style system: heterogeneous docs → provenance-preserving knowledge layer (SQLite) →
 hybrid retrieval → **rule-routed, fact-grounded answers** with claims, evidence, conflicts and "could not determine".
