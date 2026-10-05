@@ -1,5 +1,6 @@
 # Aegis Series-7 HCS — Knowledge Ingestion & Evidence-Grounded Q&A
 
+<h1 align="center">
 ## 🚀 Live Demo
 
 👉 **[TRY THE LIVE AEGIS Q&A APP →](https://aegisrag-g65yxpjn4yewr2tjxh2fu9.streamlit.app/) **
@@ -7,7 +8,7 @@
 Offline-by-default RAG-style system: heterogeneous docs → provenance-preserving knowledge layer (SQLite) →
 hybrid retrieval → **rule-routed, fact-grounded answers** with claims, evidence, conflicts and "could not determine".
 Every number below was measured by the scripts in this repo; see `eval/results*.md`.
-
+</h1>
 ## Quick start
 ```bash
 pip install -r requirements.txt            # also needs system tesseract + poppler (pdftoppm)
