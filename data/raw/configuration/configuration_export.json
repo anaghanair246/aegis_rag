@@ -1,0 +1,52 @@
+{
+  "export_metadata": {
+    "system": "Aegis Series-7 HCS",
+    "controller_id": "PLC-03",
+    "firmware_version": "3.2.1",
+    "export_timestamp": "2026-02-03T09:14:22Z",
+    "export_tool": "AegisConfigExport v1.4"
+  },
+  "startup_interlocks": {
+    "valve_iv21_required_state": "OPEN",
+    "estop_required_state": "RESET",
+    "maintenance_panel_required_state": "CLOSED",
+    "fluid_level_required_band": "NORMAL"
+  },
+  "sensors": {
+    "sensor_ps04a_threshold_bar": 200,
+    "sensor_ps04a_alarm_low_bar": 150,
+    "sensor_ps04a_alarm_high_bar": 220,
+    "sensor_ps04a_signal_type": "4-20mA",
+    "sensor_ps40_zone": "coolant_loop",
+    "sensor_ps40_note": "unrelated to HPU discharge circuit; do not map to sensor_ps04a_* keys"
+  },
+  "alarms": {
+    "A17": {
+      "description": "hydraulic_pressure_low",
+      "persistence_before_shutdown_seconds": 10,
+      "shutdown_procedure_ref": "4.7"
+    },
+    "A18": {
+      "description": "hydraulic_pressure_high",
+      "persistence_before_shutdown_seconds": null
+    },
+    "A19": {
+      "description": "pressure_sensor_signal_invalid",
+      "persistence_before_shutdown_seconds": null
+    }
+  },
+  "controller_reset": {
+    "min_pressure_bar_required_for_reset": null,
+    "max_pressure_bar_allowed_for_reset": 50,
+    "note": "reset is blocked in firmware above max_pressure_bar_allowed_for_reset"
+  },
+  "revision_applicability": {
+    "sensor_ps04a_threshold_bar": {
+      "applies_from_firmware": "3.2"
+    },
+    "sensor_ps04_legacy_threshold_bar": {
+      "value": 180,
+      "applies_before_firmware": "3.2"
+    }
+  }
+}

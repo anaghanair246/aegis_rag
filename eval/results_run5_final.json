@@ -1,0 +1,1956 @@
+{
+ "retrieval_dev": {
+  "bm25": {
+   "P@5": 0.2,
+   "R@5": 0.706,
+   "Hit@5": 0.824,
+   "MRR": 0.536,
+   "nDCG@5": 0.549,
+   "retrieval_ms_mean": 0.84,
+   "n_questions": 17
+  },
+  "tfidf": {
+   "P@5": 0.224,
+   "R@5": 0.765,
+   "Hit@5": 0.882,
+   "MRR": 0.595,
+   "nDCG@5": 0.604,
+   "retrieval_ms_mean": 0.79,
+   "n_questions": 17
+  },
+  "hybrid": {
+   "P@5": 0.212,
+   "R@5": 0.735,
+   "Hit@5": 0.882,
+   "MRR": 0.535,
+   "nDCG@5": 0.554,
+   "retrieval_ms_mean": 0.81,
+   "n_questions": 17
+  },
+  "hybrid+alias": {
+   "P@5": 0.212,
+   "R@5": 0.725,
+   "Hit@5": 0.882,
+   "MRR": 0.533,
+   "nDCG@5": 0.549,
+   "retrieval_ms_mean": 1.07,
+   "n_questions": 17
+  },
+  "hybrid+alias+rerank+dedupe (default)": {
+   "P@5": 0.247,
+   "R@5": 0.814,
+   "Hit@5": 0.941,
+   "MRR": 0.634,
+   "nDCG@5": 0.643,
+   "retrieval_ms_mean": 2.76,
+   "n_questions": 17
+  }
+ },
+ "retrieval_para": {
+  "bm25": {
+   "P@5": 0.143,
+   "R@5": 0.643,
+   "Hit@5": 0.643,
+   "MRR": 0.449,
+   "nDCG@5": 0.496,
+   "retrieval_ms_mean": 0.77,
+   "n_questions": 14
+  },
+  "tfidf": {
+   "P@5": 0.129,
+   "R@5": 0.571,
+   "Hit@5": 0.571,
+   "MRR": 0.44,
+   "nDCG@5": 0.468,
+   "retrieval_ms_mean": 0.81,
+   "n_questions": 14
+  },
+  "hybrid": {
+   "P@5": 0.129,
+   "R@5": 0.571,
+   "Hit@5": 0.571,
+   "MRR": 0.467,
+   "nDCG@5": 0.492,
+   "retrieval_ms_mean": 0.79,
+   "n_questions": 14
+  },
+  "hybrid+alias": {
+   "P@5": 0.114,
+   "R@5": 0.5,
+   "Hit@5": 0.5,
+   "MRR": 0.407,
+   "nDCG@5": 0.421,
+   "retrieval_ms_mean": 1.04,
+   "n_questions": 14
+  },
+  "hybrid+alias+rerank+dedupe (default)": {
+   "P@5": 0.129,
+   "R@5": 0.607,
+   "Hit@5": 0.643,
+   "MRR": 0.439,
+   "nDCG@5": 0.471,
+   "retrieval_ms_mean": 2.49,
+   "n_questions": 14
+  }
+ },
+ "retrieval_held": {
+  "bm25": {
+   "P@5": 0.157,
+   "R@5": 0.614,
+   "Hit@5": 0.643,
+   "MRR": 0.393,
+   "nDCG@5": 0.437,
+   "retrieval_ms_mean": 0.81,
+   "n_questions": 14
+  },
+  "tfidf": {
+   "P@5": 0.129,
+   "R@5": 0.471,
+   "Hit@5": 0.5,
+   "MRR": 0.3,
+   "nDCG@5": 0.329,
+   "retrieval_ms_mean": 0.69,
+   "n_questions": 14
+  },
+  "hybrid": {
+   "P@5": 0.171,
+   "R@5": 0.686,
+   "Hit@5": 0.714,
+   "MRR": 0.344,
+   "nDCG@5": 0.416,
+   "retrieval_ms_mean": 0.72,
+   "n_questions": 14
+  },
+  "hybrid+alias": {
+   "P@5": 0.157,
+   "R@5": 0.614,
+   "Hit@5": 0.643,
+   "MRR": 0.338,
+   "nDCG@5": 0.394,
+   "retrieval_ms_mean": 1.46,
+   "n_questions": 14
+  },
+  "hybrid+alias+rerank+dedupe (default)": {
+   "P@5": 0.143,
+   "R@5": 0.543,
+   "Hit@5": 0.571,
+   "MRR": 0.327,
+   "nDCG@5": 0.37,
+   "retrieval_ms_mean": 2.18,
+   "n_questions": 14
+  }
+ },
+ "answers_dev": {
+  "n": 23,
+  "end_to_end_correct": 1.0,
+  "status_accuracy": 1.0,
+  "key_fact_recall(answerable)": 1.0,
+  "citation_required_doc_recall": 1.0,
+  "citation_doc_precision": 0.622,
+  "unsupported_claim_rate": 0.0,
+  "hallucination_rate": 0.0,
+  "abstention_recall(unanswerable)": 1.0,
+  "abstention_precision": 1.0,
+  "false_abstentions(answerable)": 0,
+  "latency_total_ms_p50": 6.3,
+  "latency_total_ms_max": 14.6,
+  "latency_retrieval_ms_mean": 4.0
+ },
+ "answers_para": {
+  "n": 18,
+  "end_to_end_correct": 0.944,
+  "status_accuracy": 0.944,
+  "key_fact_recall(answerable)": 0.929,
+  "citation_required_doc_recall": 1.0,
+  "citation_doc_precision": 0.499,
+  "unsupported_claim_rate": 0.0,
+  "hallucination_rate": 0.0,
+  "abstention_recall(unanswerable)": 1.0,
+  "abstention_precision": 0.8,
+  "false_abstentions(answerable)": 1,
+  "latency_total_ms_p50": 6.5,
+  "latency_total_ms_max": 10.8,
+  "latency_retrieval_ms_mean": 5.0
+ },
+ "answers_held": {
+  "n": 15,
+  "end_to_end_correct": 0.467,
+  "status_accuracy": 0.533,
+  "key_fact_recall(answerable)": 0.786,
+  "citation_required_doc_recall": 0.786,
+  "citation_doc_precision": 0.589,
+  "unsupported_claim_rate": 0.0,
+  "hallucination_rate": 0.0,
+  "abstention_recall(unanswerable)": 1.0,
+  "abstention_precision": 0.25,
+  "false_abstentions(answerable)": 3,
+  "latency_total_ms_p50": 6.3,
+  "latency_total_ms_max": 8.8,
+  "latency_retrieval_ms_mean": 4.7
+ },
+ "ingestion": {
+  "total_seconds": 8.191,
+  "ingest_seconds": 8.178,
+  "knowledge_seconds": 0.008,
+  "documents": 17,
+  "passages": 102
+ },
+ "unresolved_gold": {},
+ "per_question": [
+  {
+   "id": "Q1",
+   "set": "dev",
+   "category": "direct",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.3333333333333333,
+   "n_claims": 6,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "startup",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.3,
+    "answer": 7.6,
+    "total": 11.9
+   },
+   "answer": "Per the Operator Manual (\u00a74.3), before starting the HPU: (1) Hydraulic fluid level is within the normal band on the sight glass. (2) Isolation valve IV-21 is OPEN. (3) emergency stop circuit is RESET. (4) Maintenance access panel must be installed (do not start with it removed)."
+  },
+  {
+   "id": "Q2",
+   "set": "dev",
+   "category": "numeric+revision",
+   "expected": [
+    "ANSWERED",
+    "ANSWERED_WITH_CAVEATS"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.4,
+   "n_claims": 5,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "normal_pressure",
+   "confidence": "medium",
+   "flags": {
+    "conflicts": 1,
+    "unknowns": 0,
+    "assumptions": 1
+   },
+   "ms": {
+    "retrieval": 4.0,
+    "answer": 3.0,
+    "total": 7.0
+   },
+   "answer": "Normal HPU discharge pressure is 200 bar on software revision \u2265 3.2 (PS-04A) and 180 bar on revisions < 3.2 (PS-04)."
+  },
+  {
+   "id": "Q3",
+   "set": "dev",
+   "category": "direct",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.5,
+   "n_claims": 4,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "alarm_meaning",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 3.7,
+    "answer": 1.9,
+    "total": 5.6
+   },
+   "answer": "A17 = Hydraulic pressure below 150 bar. Possible causes: IV-21 closed or partially closed; Low hydraulic fluid; Pressure sensor signal invalid."
+  },
+  {
+   "id": "Q4",
+   "set": "dev",
+   "category": "entity",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 1.0,
+   "n_claims": 3,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "identity",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 1
+   },
+   "ms": {
+    "retrieval": 3.9,
+    "answer": 2.2,
+    "total": 6.1
+   },
+   "answer": "No. PS-04 and PS-04A are distinct components: PS-04A supersedes PS-04 from software revision 3.2 (ECN-1042); they are related by supersession, not identity."
+  },
+  {
+   "id": "Q5",
+   "set": "dev",
+   "category": "direct",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.5,
+   "n_claims": 2,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "introduced_by",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 3.9,
+    "answer": 1.1,
+    "total": 5.0
+   },
+   "answer": "ECN-1042 (effective software revision 3.2). ECN-1058 later corrected alarm A17 wording only."
+  },
+  {
+   "id": "Q6",
+   "set": "dev",
+   "category": "diagram",
+   "expected": [
+    "ANSWERED",
+    "ANSWERED_WITH_CAVEATS"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.5,
+   "n_claims": 3,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "schematic_links",
+   "confidence": "medium",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 3.4,
+    "answer": 11.2,
+    "total": 14.6
+   },
+   "answer": "PS-04A and IV-21 (purple control/signal lines). The PLC-03\u2013HPU line is drawn grey (hydraulic path), so it is not counted as a signal connection."
+  },
+  {
+   "id": "Q7",
+   "set": "dev",
+   "category": "direct",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.5,
+   "n_claims": 4,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "a17_persist",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.0,
+    "answer": 1.9,
+    "total": 6.0
+   },
+   "answer": "Run Shutdown Procedure 4.7: close IV-21, confirm pressure decay, set POWER selector to OFF, tag out per site lockout/tagout procedure, then proceed to Section 6 (Troubleshooting)."
+  },
+  {
+   "id": "Q8",
+   "set": "dev",
+   "category": "multi-passage",
+   "expected": [
+    "ANSWERED",
+    "ANSWERED_WITH_CAVEATS"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.6666666666666666,
+   "n_claims": 3,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "reset",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 2,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 3.6,
+    "answer": 6.2,
+    "total": 9.8
+   },
+   "answer": "Do not reset the controller while hydraulic pressure is above 50 bar; bleed pressure below 50 bar first."
+  },
+  {
+   "id": "Q9",
+   "set": "dev",
+   "category": "revision",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.6666666666666666,
+   "n_claims": 2,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "pressure_history",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.3,
+    "answer": 2.2,
+    "total": 6.5
+   },
+   "answer": "180 bar before 3.2; changed to 200 bar by ECN-1042 (effective software revision 3.2)."
+  },
+  {
+   "id": "Q10",
+   "set": "dev",
+   "category": "direct",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.3333333333333333,
+   "n_claims": 3,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "alarm_for_reading",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.2,
+    "answer": 2.2,
+    "total": 6.4
+   },
+   "answer": "A17 \u2014 Hydraulic pressure below 150 bar."
+  },
+  {
+   "id": "Q11",
+   "set": "dev",
+   "category": "direct",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 1.0,
+   "n_claims": 1,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "location",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.2,
+    "answer": 0.7,
+    "total": 4.9
+   },
+   "answer": "Component Register: IV-21 (Isolation Valve 21) is located at 'Hydraulic Module'. The register lists a module-level location only; it gives no finer physical position."
+  },
+  {
+   "id": "Q12",
+   "set": "dev",
+   "category": "multi-passage",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.5,
+   "n_claims": 4,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "slide_novelty",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 3.7,
+    "answer": 1.8,
+    "total": 5.5
+   },
+   "answer": "Yes, one component: the Auxiliary Reservoir (Line 4/5-specific). No new alarms are introduced."
+  },
+  {
+   "id": "Q13",
+   "set": "dev",
+   "category": "unanswerable",
+   "expected": [
+    "INSUFFICIENT_EVIDENCE"
+   ],
+   "status": "INSUFFICIENT_EVIDENCE",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": null,
+   "cite_precision": null,
+   "n_claims": 2,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "screenshot",
+   "confidence": "n/a",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 2,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.0,
+    "answer": 1.6,
+    "total": 5.6
+   },
+   "answer": "Cannot be determined: no HMI screenshot (e.g. a diagnostics screen) is present in the ingested package, so no sensor ID can be read from one."
+  },
+  {
+   "id": "Q14",
+   "set": "dev",
+   "category": "direct",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 1.0,
+   "n_claims": 3,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "revision_history",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.3,
+    "answer": 3.4,
+    "total": 7.8
+   },
+   "answer": "Software 3.2 took effect 2025-09-30. Pressure sensor PS-04 replaced by PS-04A. Normal HPU discharge pressure setpoint changed from 180 bar to 200 bar. See ECN-1042. Software 3.3 is listed as planned (2026-04-07) and not published."
+  },
+  {
+   "id": "Q15",
+   "set": "dev",
+   "category": "terminology",
+   "expected": [
+    "ANSWERED",
+    "ANSWERED_WITH_CAVEATS"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.5,
+   "n_claims": 4,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "config_key",
+   "confidence": "medium",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 1
+   },
+   "ms": {
+    "retrieval": 4.1,
+    "answer": 2.0,
+    "total": 6.1
+   },
+   "answer": "It is PS-04A's normal operating-pressure setpoint (200 bar on software revision \u2265 3.2) \u2014 the manual's 'normal HPU discharge pressure'."
+  },
+  {
+   "id": "Q16",
+   "set": "dev",
+   "category": "revision",
+   "expected": [
+    "ANSWERED",
+    "ANSWERED_WITH_CAVEATS"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.6666666666666666,
+   "n_claims": 3,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "pressure_scope",
+   "confidence": "medium",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.3,
+    "answer": 2.3,
+    "total": 6.6
+   },
+   "answer": "Only some units: those running software revision \u2265 3.2 (PS-04A). Earlier revisions use 180 bar."
+  },
+  {
+   "id": "Q17",
+   "set": "dev",
+   "category": "entity",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 1.0,
+   "n_claims": 3,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "identity",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 1
+   },
+   "ms": {
+    "retrieval": 3.7,
+    "answer": 2.5,
+    "total": 6.3
+   },
+   "answer": "No. PS-40 is a coolant-loop sensor (Skid B), unrelated to the HPU discharge sensor PS-04."
+  },
+  {
+   "id": "Q18",
+   "set": "dev",
+   "category": "revision/ambiguous",
+   "expected": [
+    "ANSWERED",
+    "ANSWERED_WITH_CAVEATS"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.5,
+   "n_claims": 3,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "pressure_history",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 1
+   },
+   "ms": {
+    "retrieval": 4.0,
+    "answer": 2.9,
+    "total": 6.9
+   },
+   "answer": "180 bar before 3.2; changed to 200 bar by ECN-1042 (effective software revision 3.2)."
+  },
+  {
+   "id": "Q19",
+   "set": "dev",
+   "category": "unanswerable",
+   "expected": [
+    "INSUFFICIENT_EVIDENCE"
+   ],
+   "status": "INSUFFICIENT_EVIDENCE",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": null,
+   "cite_precision": null,
+   "n_claims": 0,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "gap",
+   "confidence": "n/a",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 3.7,
+    "answer": 0.3,
+    "total": 4.0
+   },
+   "answer": "Not determinable from the package: no source states the operating temperature for the item asked about."
+  },
+  {
+   "id": "Q20",
+   "set": "dev",
+   "category": "unanswerable",
+   "expected": [
+    "INSUFFICIENT_EVIDENCE"
+   ],
+   "status": "INSUFFICIENT_EVIDENCE",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": null,
+   "cite_precision": null,
+   "n_claims": 2,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "gap",
+   "confidence": "n/a",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 2,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.0,
+    "answer": 4.2,
+    "total": 8.2
+   },
+   "answer": "Not determinable from the package: no source states the calibration interval for the item asked about."
+  },
+  {
+   "id": "Q21",
+   "set": "dev",
+   "category": "unanswerable",
+   "expected": [
+    "INSUFFICIENT_EVIDENCE"
+   ],
+   "status": "INSUFFICIENT_EVIDENCE",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": null,
+   "cite_precision": null,
+   "n_claims": 1,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "gap",
+   "confidence": "n/a",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 3.9,
+    "answer": 1.2,
+    "total": 5.1
+   },
+   "answer": "Not determinable from the package: no source states the approver of a change notice for the item asked about."
+  },
+  {
+   "id": "Q22",
+   "set": "dev",
+   "category": "unanswerable",
+   "expected": [
+    "INSUFFICIENT_EVIDENCE"
+   ],
+   "status": "INSUFFICIENT_EVIDENCE",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": null,
+   "cite_precision": null,
+   "n_claims": 0,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "gap",
+   "confidence": "n/a",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.2,
+    "answer": 0.8,
+    "total": 5.0
+   },
+   "answer": "Not determinable from the package: no source states the mean time between failures (MTBF) for the item asked about."
+  },
+  {
+   "id": "Q23",
+   "set": "dev",
+   "category": "unanswerable",
+   "expected": [
+    "INSUFFICIENT_EVIDENCE"
+   ],
+   "status": "INSUFFICIENT_EVIDENCE",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": null,
+   "cite_precision": null,
+   "n_claims": 1,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "gap",
+   "confidence": "n/a",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.7,
+    "answer": 1.9,
+    "total": 6.6
+   },
+   "answer": "Not determinable from the package: no source states the supply-voltage compatibility for the item asked about."
+  },
+  {
+   "id": "P1",
+   "set": "para",
+   "category": "direct",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.3333333333333333,
+   "n_claims": 6,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "startup",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 3.8,
+    "answer": 2.9,
+    "total": 6.7
+   },
+   "answer": "Per the Operator Manual (\u00a74.3), before starting the HPU: (1) Hydraulic fluid level is within the normal band on the sight glass. (2) Isolation valve IV-21 is OPEN. (3) emergency stop circuit is RESET. (4) Maintenance access panel must be installed (do not start with it removed)."
+  },
+  {
+   "id": "P2",
+   "set": "para",
+   "category": "numeric+revision",
+   "expected": [
+    "ANSWERED",
+    "ANSWERED_WITH_CAVEATS"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.25,
+   "n_claims": 3,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "normal_pressure",
+   "confidence": "medium",
+   "flags": {
+    "conflicts": 1,
+    "unknowns": 0,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.1,
+    "answer": 1.9,
+    "total": 6.0
+   },
+   "answer": "Normal HPU discharge pressure is 200 bar on software revision \u2265 3.2 (PS-04A)."
+  },
+  {
+   "id": "P3",
+   "set": "para",
+   "category": "direct",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.5,
+   "n_claims": 4,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "alarm_meaning",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.6,
+    "answer": 2.9,
+    "total": 7.6
+   },
+   "answer": "A17 = Hydraulic pressure below 150 bar. Possible causes: IV-21 closed or partially closed; Low hydraulic fluid; Pressure sensor signal invalid."
+  },
+  {
+   "id": "P4",
+   "set": "para",
+   "category": "entity",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.5,
+   "n_claims": 3,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "identity",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 1
+   },
+   "ms": {
+    "retrieval": 5.8,
+    "answer": 3.3,
+    "total": 9.1
+   },
+   "answer": "No. PS-04 and PS-04A are distinct components: PS-04A supersedes PS-04 from software revision 3.2 (ECN-1042); they are related by supersession, not identity."
+  },
+  {
+   "id": "P5",
+   "set": "para",
+   "category": "direct",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.5,
+   "n_claims": 2,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "introduced_by",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 8.0,
+    "answer": 1.3,
+    "total": 9.4
+   },
+   "answer": "ECN-1042 (effective software revision 3.2). ECN-1058 later corrected alarm A17 wording only."
+  },
+  {
+   "id": "P6",
+   "set": "para",
+   "category": "direct",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.5,
+   "n_claims": 4,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "a17_persist",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.8,
+    "answer": 2.7,
+    "total": 7.5
+   },
+   "answer": "Run Shutdown Procedure 4.7: close IV-21, confirm pressure decay, set POWER selector to OFF, tag out per site lockout/tagout procedure, then proceed to Section 6 (Troubleshooting)."
+  },
+  {
+   "id": "P7",
+   "set": "para",
+   "category": "multi-passage",
+   "expected": [
+    "ANSWERED",
+    "ANSWERED_WITH_CAVEATS"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.3333333333333333,
+   "n_claims": 3,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "reset",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 2,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 5.3,
+    "answer": 2.3,
+    "total": 7.6
+   },
+   "answer": "Do not reset the controller while hydraulic pressure is above 50 bar; bleed pressure below 50 bar first. At 80 bar: NO \u2014 reset is not permitted (above 50 bar; firmware blocks it)."
+  },
+  {
+   "id": "P8",
+   "set": "para",
+   "category": "direct",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 1.0,
+   "n_claims": 1,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "location",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 3.6,
+    "answer": 0.7,
+    "total": 4.2
+   },
+   "answer": "Component Register: IV-21 (Isolation Valve 21) is located at 'Hydraulic Module'. The register lists a module-level location only; it gives no finer physical position."
+  },
+  {
+   "id": "P9",
+   "set": "para",
+   "category": "direct",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.5,
+   "n_claims": 2,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "alarm_for_reading",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.6,
+    "answer": 1.7,
+    "total": 6.3
+   },
+   "answer": "A18 \u2014 Hydraulic pressure above 220 bar."
+  },
+  {
+   "id": "P10",
+   "set": "para",
+   "category": "direct",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 1.0,
+   "n_claims": 3,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "revision_history",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 5.3,
+    "answer": 2.1,
+    "total": 7.4
+   },
+   "answer": "Software 3.2 took effect 2025-09-30. Pressure sensor PS-04 replaced by PS-04A. Normal HPU discharge pressure setpoint changed from 180 bar to 200 bar. See ECN-1042. Software 3.3 is listed as planned (2026-04-07) and not published."
+  },
+  {
+   "id": "P11",
+   "set": "para",
+   "category": "unanswerable",
+   "expected": [
+    "INSUFFICIENT_EVIDENCE"
+   ],
+   "status": "INSUFFICIENT_EVIDENCE",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": null,
+   "cite_precision": null,
+   "n_claims": 1,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "fallback",
+   "confidence": "n/a",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.4,
+    "answer": 1.8,
+    "total": 6.2
+   },
+   "answer": "No grounded answer could be produced: the question did not match a supported pattern, and the retrieved passages were not verified to answer it."
+  },
+  {
+   "id": "P12",
+   "set": "para",
+   "category": "unanswerable",
+   "expected": [
+    "INSUFFICIENT_EVIDENCE"
+   ],
+   "status": "INSUFFICIENT_EVIDENCE",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": null,
+   "cite_precision": null,
+   "n_claims": 0,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "gap",
+   "confidence": "n/a",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 3.3,
+    "answer": 0.3,
+    "total": 3.6
+   },
+   "answer": "Not determinable from the package: no source states the operating temperature for the item asked about."
+  },
+  {
+   "id": "P13",
+   "set": "para",
+   "category": "noise-doc answerable",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "INSUFFICIENT_EVIDENCE",
+   "status_ok": false,
+   "facts_ok": false,
+   "cite_recall": 1.0,
+   "cite_precision": 0.3333333333333333,
+   "n_claims": 1,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": false,
+   "handler": "fallback",
+   "confidence": "n/a",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 3.9,
+    "answer": 1.2,
+    "total": 5.1
+   },
+   "answer": "No grounded answer could be produced: the question did not match a supported pattern, and the retrieved passages were not verified to answer it."
+  },
+  {
+   "id": "P14",
+   "set": "para",
+   "category": "conflict",
+   "expected": [
+    "ANSWERED",
+    "ANSWERED_WITH_CAVEATS"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.4,
+   "n_claims": 5,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "normal_pressure",
+   "confidence": "medium",
+   "flags": {
+    "conflicts": 1,
+    "unknowns": 0,
+    "assumptions": 2
+   },
+   "ms": {
+    "retrieval": 7.7,
+    "answer": 3.1,
+    "total": 10.8
+   },
+   "answer": "Normal HPU discharge pressure is 200 bar on software revision \u2265 3.2 (PS-04A) and 180 bar on revisions < 3.2 (PS-04)."
+  },
+  {
+   "id": "P15",
+   "set": "para",
+   "category": "multi-passage",
+   "expected": [
+    "ANSWERED",
+    "ANSWERED_WITH_CAVEATS"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.3333333333333333,
+   "n_claims": 3,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "reset",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 2,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.2,
+    "answer": 1.8,
+    "total": 6.0
+   },
+   "answer": "Do not reset the controller while hydraulic pressure is above 50 bar; bleed pressure below 50 bar first. At 60 bar: NO \u2014 reset is not permitted (above 50 bar; firmware blocks it)."
+  },
+  {
+   "id": "P16",
+   "set": "para",
+   "category": "unanswerable",
+   "expected": [
+    "INSUFFICIENT_EVIDENCE"
+   ],
+   "status": "INSUFFICIENT_EVIDENCE",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": null,
+   "cite_precision": null,
+   "n_claims": 1,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "fallback",
+   "confidence": "n/a",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.4,
+    "answer": 1.4,
+    "total": 5.8
+   },
+   "answer": "No grounded answer could be produced: the question did not match a supported pattern, and the retrieved passages were not verified to answer it."
+  },
+  {
+   "id": "P17",
+   "set": "para",
+   "category": "terminology",
+   "expected": [
+    "ANSWERED",
+    "ANSWERED_WITH_CAVEATS"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.5,
+   "n_claims": 2,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "term",
+   "confidence": "medium",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 1
+   },
+   "ms": {
+    "retrieval": 2.7,
+    "answer": 1.7,
+    "total": 4.4
+   },
+   "answer": "'hydraulic pack' refers to HPU \u2014 Hydraulic Power Unit."
+  },
+  {
+   "id": "P18",
+   "set": "para",
+   "category": "entity-trap",
+   "expected": [
+    "INSUFFICIENT_EVIDENCE"
+   ],
+   "status": "INSUFFICIENT_EVIDENCE",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": null,
+   "cite_precision": null,
+   "n_claims": 2,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "entity_guard",
+   "confidence": "n/a",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 8.6,
+    "answer": 1.6,
+    "total": 10.2
+   },
+   "answer": "Cannot be determined: PS-40 is a coolant-loop sensor (Skid B) that the Component Register says is NOT related to the HPU discharge circuit; the 180/200 bar figures do not apply to it and no PS-40 specification is in the package."
+  },
+  {
+   "id": "H1",
+   "set": "held",
+   "category": "direct",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": false,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 1.0,
+   "n_claims": 1,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": false,
+   "handler": "fact_lookup",
+   "confidence": "medium",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 1
+   },
+   "ms": {
+    "retrieval": 4.9,
+    "answer": 1.4,
+    "total": 6.3
+   },
+   "answer": "HPU \u2014 startup_precondition: Hydraulic fluid level is within the normal band on the sight glass; Isolation valve IV-21 is OPEN; emergency stop circuit is RESET; Maintenance access panel must be installed (do not start with it removed)"
+  },
+  {
+   "id": "H2",
+   "set": "held",
+   "category": "revision",
+   "expected": [
+    "ANSWERED",
+    "ANSWERED_WITH_CAVEATS"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.25,
+   "n_claims": 3,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "normal_pressure",
+   "confidence": "medium",
+   "flags": {
+    "conflicts": 1,
+    "unknowns": 0,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 6.0,
+    "answer": 2.8,
+    "total": 8.8
+   },
+   "answer": "Normal HPU discharge pressure is 180 bar on revisions < 3.2 (PS-04)."
+  },
+  {
+   "id": "H3",
+   "set": "held",
+   "category": "direct",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": false,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 1.0,
+   "n_claims": 2,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": false,
+   "handler": "fact_lookup",
+   "confidence": "medium",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 1
+   },
+   "ms": {
+    "retrieval": 4.6,
+    "answer": 1.6,
+    "total": 6.3
+   },
+   "answer": "A19 \u2014 condition: Pressure sensor signal invalid | A19 \u2014 possible_cause: Sensor wiring fault; Sensor drift beyond tolerance (see ECN-1042)"
+  },
+  {
+   "id": "H4",
+   "set": "held",
+   "category": "entity",
+   "expected": [
+    "ANSWERED",
+    "ANSWERED_WITH_CAVEATS"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 0.0,
+   "cite_precision": 0.0,
+   "n_claims": 1,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "extractive",
+   "confidence": "low",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 1
+   },
+   "ms": {
+    "retrieval": 6.9,
+    "answer": 1.2,
+    "total": 8.1
+   },
+   "answer": "Closest documented statement: \u201cYou'll sometimes hear techs call it the \"hydraulic pack\" or just \"the unit\" \u2014 same thing.\u201d (extra/training_slide_excerpt.pptx)."
+  },
+  {
+   "id": "H5",
+   "set": "held",
+   "category": "diagram",
+   "expected": [
+    "ANSWERED",
+    "ANSWERED_WITH_CAVEATS"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": true,
+   "facts_ok": false,
+   "cite_recall": 1.0,
+   "cite_precision": 1.0,
+   "n_claims": 1,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": false,
+   "handler": "extractive",
+   "confidence": "low",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 1
+   },
+   "ms": {
+    "retrieval": 4.2,
+    "answer": 1.1,
+    "total": 5.3
+   },
+   "answer": "Closest documented statement: \u201c[Diagram connection] 'PLC-03' is connected to 'Terminal Block TB-7' by a grey line = unspecified in legend.\u201d (diagrams/wiring_diagram.pdf)."
+  },
+  {
+   "id": "H6",
+   "set": "held",
+   "category": "direct",
+   "expected": [
+    "ANSWERED",
+    "ANSWERED_WITH_CAVEATS"
+   ],
+   "status": "INSUFFICIENT_EVIDENCE",
+   "status_ok": false,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.3333333333333333,
+   "n_claims": 1,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": false,
+   "handler": "fallback",
+   "confidence": "n/a",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 5.5,
+    "answer": 1.7,
+    "total": 7.3
+   },
+   "answer": "No grounded answer could be produced: the question did not match a supported pattern, and the retrieved passages were not verified to answer it."
+  },
+  {
+   "id": "H7",
+   "set": "held",
+   "category": "direct",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": false,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 1.0,
+   "n_claims": 1,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": false,
+   "handler": "fact_lookup",
+   "confidence": "medium",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 1
+   },
+   "ms": {
+    "retrieval": 4.8,
+    "answer": 1.1,
+    "total": 5.9
+   },
+   "answer": "A18 \u2014 trigger_threshold: 220 bar"
+  },
+  {
+   "id": "H8",
+   "set": "held",
+   "category": "structured",
+   "expected": [
+    "ANSWERED",
+    "ANSWERED_WITH_CAVEATS"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 1.0,
+   "n_claims": 2,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "fact_lookup",
+   "confidence": "medium",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 1
+   },
+   "ms": {
+    "retrieval": 5.3,
+    "answer": 1.7,
+    "total": 7.0
+   },
+   "answer": "PS-04A \u2014 sensor_ps04a_alarm_high_bar: 220 bar | PS-04A \u2014 sensor_ps04a_alarm_low_bar: 150 bar"
+  },
+  {
+   "id": "H9",
+   "set": "held",
+   "category": "revision",
+   "expected": [
+    "ANSWERED",
+    "ANSWERED_WITH_CAVEATS"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 1.0,
+   "n_claims": 1,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "fact_lookup",
+   "confidence": "medium",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 1
+   },
+   "ms": {
+    "retrieval": 5.6,
+    "answer": 1.1,
+    "total": 6.6
+   },
+   "answer": "software revision 3.3 \u2014 changes: Scheduled: extended diagnostics logging. No sensor or setpoint changes currently planned."
+  },
+  {
+   "id": "H10",
+   "set": "held",
+   "category": "direct",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": false,
+   "facts_ok": true,
+   "cite_recall": 0.0,
+   "cite_precision": 0.0,
+   "n_claims": 1,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": false,
+   "handler": "fact_lookup",
+   "confidence": "medium",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 1
+   },
+   "ms": {
+    "retrieval": 5.5,
+    "answer": 1.2,
+    "total": 6.7
+   },
+   "answer": "A17 \u2014 persistence_before_shutdown_seconds: 10 s"
+  },
+  {
+   "id": "H11",
+   "set": "held",
+   "category": "unanswerable",
+   "expected": [
+    "INSUFFICIENT_EVIDENCE"
+   ],
+   "status": "INSUFFICIENT_EVIDENCE",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": null,
+   "cite_precision": null,
+   "n_claims": 1,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "fallback",
+   "confidence": "n/a",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 3.0,
+    "answer": 1.3,
+    "total": 4.3
+   },
+   "answer": "No grounded answer could be produced: the question did not match a supported pattern, and the retrieved passages were not verified to answer it."
+  },
+  {
+   "id": "H12",
+   "set": "held",
+   "category": "revision",
+   "expected": [
+    "ANSWERED",
+    "ANSWERED_WITH_CAVEATS"
+   ],
+   "status": "INSUFFICIENT_EVIDENCE",
+   "status_ok": false,
+   "facts_ok": false,
+   "cite_recall": 1.0,
+   "cite_precision": 0.3333333333333333,
+   "n_claims": 1,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": false,
+   "handler": "fallback",
+   "confidence": "n/a",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.0,
+    "answer": 1.1,
+    "total": 5.2
+   },
+   "answer": "No grounded answer could be produced: the question did not match a supported pattern, and the retrieved passages were not verified to answer it."
+  },
+  {
+   "id": "H13",
+   "set": "held",
+   "category": "multi-passage",
+   "expected": [
+    "ANSWERED",
+    "ANSWERED_WITH_CAVEATS"
+   ],
+   "status": "ANSWERED_WITH_CAVEATS",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 0.3333333333333333,
+   "n_claims": 3,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "reset",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 2,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 4.7,
+    "answer": 1.7,
+    "total": 6.4
+   },
+   "answer": "Do not reset the controller while hydraulic pressure is above 50 bar; bleed pressure below 50 bar first. At 30 bar: below 50 bar, so reset is permitted per the manuals."
+  },
+  {
+   "id": "H14",
+   "set": "held",
+   "category": "direct",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "ANSWERED",
+   "status_ok": true,
+   "facts_ok": true,
+   "cite_recall": 1.0,
+   "cite_precision": 1.0,
+   "n_claims": 1,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": true,
+   "handler": "location",
+   "confidence": "high",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 0,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 2.4,
+    "answer": 0.8,
+    "total": 3.2
+   },
+   "answer": "Component Register: HPU (Hydraulic Power Unit) is located at 'Skid A, Bay 2'."
+  },
+  {
+   "id": "H15",
+   "set": "held",
+   "category": "noise-doc answerable",
+   "expected": [
+    "ANSWERED"
+   ],
+   "status": "INSUFFICIENT_EVIDENCE",
+   "status_ok": false,
+   "facts_ok": false,
+   "cite_recall": 0.0,
+   "cite_precision": 0.0,
+   "n_claims": 1,
+   "unsupported_claims": 0,
+   "ungrounded_numbers": [],
+   "hallucination": false,
+   "correct": false,
+   "handler": "fallback",
+   "confidence": "n/a",
+   "flags": {
+    "conflicts": 0,
+    "unknowns": 1,
+    "assumptions": 0
+   },
+   "ms": {
+    "retrieval": 3.3,
+    "answer": 0.8,
+    "total": 4.1
+   },
+   "answer": "No grounded answer could be produced: the question did not match a supported pattern, and the retrieved passages were not verified to answer it."
+  }
+ ]
+}

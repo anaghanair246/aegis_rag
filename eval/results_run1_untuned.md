@@ -1,0 +1,104 @@
+# Evaluation results (auto-generated, measured)
+
+Ingestion: {'total_seconds': 8.191, 'ingest_seconds': 8.178, 'knowledge_seconds': 0.008, 'documents': 17, 'passages': 102}
+
+
+## retrieval_dev
+
+| config | P@5 | R@5 | Hit@5 | MRR | nDCG@5 | retrieval_ms_mean | n_questions |
+|---|---|---|---|---|---|---|---|
+| bm25 | 0.2 | 0.706 | 0.824 | 0.536 | 0.549 | 0.73 | 17 |
+| tfidf | 0.224 | 0.765 | 0.882 | 0.595 | 0.604 | 0.7 | 17 |
+| hybrid | 0.212 | 0.735 | 0.882 | 0.535 | 0.554 | 0.72 | 17 |
+| hybrid+alias | 0.212 | 0.725 | 0.882 | 0.533 | 0.549 | 0.86 | 17 |
+| hybrid+alias+rerank+dedupe (default) | 0.247 | 0.814 | 0.941 | 0.634 | 0.643 | 2.28 | 17 |
+
+## retrieval_para
+
+| config | P@5 | R@5 | Hit@5 | MRR | nDCG@5 | retrieval_ms_mean | n_questions |
+|---|---|---|---|---|---|---|---|
+| bm25 | 0.143 | 0.643 | 0.643 | 0.449 | 0.496 | 0.66 | 14 |
+| tfidf | 0.129 | 0.571 | 0.571 | 0.44 | 0.468 | 0.69 | 14 |
+| hybrid | 0.129 | 0.571 | 0.571 | 0.467 | 0.492 | 1.18 | 14 |
+| hybrid+alias | 0.114 | 0.5 | 0.5 | 0.407 | 0.421 | 1.03 | 14 |
+| hybrid+alias+rerank+dedupe (default) | 0.129 | 0.607 | 0.643 | 0.439 | 0.471 | 2.23 | 14 |
+
+## answers_dev
+
+- n: **23**
+- end_to_end_correct: **0.957**
+- status_accuracy: **1.0**
+- key_fact_recall(answerable): **1.0**
+- citation_required_doc_recall: **1.0**
+- citation_doc_precision: **0.622**
+- unsupported_claim_rate: **0.0**
+- hallucination_rate: **0.043**
+- abstention_recall(unanswerable): **1.0**
+- abstention_precision: **1.0**
+- false_abstentions(answerable): **0**
+- latency_total_ms_p50: **5.4**
+- latency_total_ms_max: **14.1**
+- latency_retrieval_ms_mean: **3.6**
+
+## answers_para
+
+- n: **18**
+- end_to_end_correct: **0.389**
+- status_accuracy: **0.5**
+- key_fact_recall(answerable): **0.286**
+- citation_required_doc_recall: **0.571**
+- citation_doc_precision: **0.256**
+- unsupported_claim_rate: **0.0**
+- hallucination_rate: **0.056**
+- abstention_recall(unanswerable): **1.0**
+- abstention_precision: **0.308**
+- false_abstentions(answerable): **9**
+- latency_total_ms_p50: **4.8**
+- latency_total_ms_max: **7.6**
+- latency_retrieval_ms_mean: **3.9**
+
+## Per-question
+
+| id | set | expected | got | facts | correct | handler | ungrounded nums |
+|---|---|---|---|---|---|---|---|
+| Q1 | dev | ANSWER | ANSWERED | True | True | startup | [] |
+| Q2 | dev | ANSWER/ANSWER | ANSWERED_ | True | True | normal_pressure | [] |
+| Q3 | dev | ANSWER | ANSWERED | True | True | alarm_meaning | [] |
+| Q4 | dev | ANSWER | ANSWERED | True | True | identity | [] |
+| Q5 | dev | ANSWER | ANSWERED | True | True | introduced_by | [] |
+| Q6 | dev | ANSWER/ANSWER | ANSWERED_ | True | True | schematic_links | [] |
+| Q7 | dev | ANSWER | ANSWERED | True | True | a17_persist | [] |
+| Q8 | dev | ANSWER/ANSWER | ANSWERED_ | True | True | reset | [] |
+| Q9 | dev | ANSWER | ANSWERED | True | True | pressure_history | [] |
+| Q10 | dev | ANSWER | ANSWERED | True | True | alarm_for_reading | [] |
+| Q11 | dev | ANSWER | ANSWERED | True | True | location | [] |
+| Q12 | dev | ANSWER | ANSWERED | True | True | slide_novelty | [] |
+| Q13 | dev | INSUFF | INSUFFICI | True | True | screenshot | [] |
+| Q14 | dev | ANSWER | ANSWERED | True | True | revision_history | [] |
+| Q15 | dev | ANSWER/ANSWER | ANSWERED_ | True | True | config_key | [] |
+| Q16 | dev | ANSWER/ANSWER | ANSWERED_ | True | True | pressure_scope | [] |
+| Q17 | dev | ANSWER | ANSWERED | True | True | identity | [] |
+| Q18 | dev | ANSWER/ANSWER | ANSWERED_ | True | True | pressure_history | [] |
+| Q19 | dev | INSUFF | INSUFFICI | True | True | gap | [] |
+| Q20 | dev | INSUFF | INSUFFICI | True | True | gap | [] |
+| Q21 | dev | INSUFF | INSUFFICI | True | True | gap | [] |
+| Q22 | dev | INSUFF | INSUFFICI | True | True | gap | [] |
+| Q23 | dev | INSUFF | INSUFFICI | True | False | gap | ['400 v'] |
+| P1 | para | ANSWER | INSUFFICI | False | False | fallback | [] |
+| P2 | para | ANSWER/ANSWER | ANSWERED_ | True | True | normal_pressure | [] |
+| P3 | para | ANSWER | ANSWERED | True | True | alarm_meaning | [] |
+| P4 | para | ANSWER | INSUFFICI | False | False | fallback | [] |
+| P5 | para | ANSWER | INSUFFICI | False | False | fallback | [] |
+| P6 | para | ANSWER | ANSWERED | False | False | alarm_meaning | [] |
+| P7 | para | ANSWER/ANSWER | INSUFFICI | False | False | fallback | [] |
+| P8 | para | ANSWER | ANSWERED | True | True | location | [] |
+| P9 | para | ANSWER | INSUFFICI | False | False | fallback | [] |
+| P10 | para | ANSWER | INSUFFICI | False | False | fallback | [] |
+| P11 | para | INSUFF | INSUFFICI | True | True | fallback | [] |
+| P12 | para | INSUFF | INSUFFICI | True | True | fallback | [] |
+| P13 | para | ANSWER | INSUFFICI | False | False | fallback | [] |
+| P14 | para | ANSWER/ANSWER | INSUFFICI | False | False | fallback | [] |
+| P15 | para | ANSWER/ANSWER | ANSWERED_ | True | True | reset | [] |
+| P16 | para | INSUFF | INSUFFICI | True | True | fallback | [] |
+| P17 | para | ANSWER | INSUFFICI | False | False | fallback | [] |
+| P18 | para | INSUFF | INSUFFICI | True | False | entity_guard | ['200 bar'] |

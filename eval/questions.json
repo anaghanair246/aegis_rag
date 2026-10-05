@@ -1,0 +1,1626 @@
+[
+ {
+  "id": "Q1",
+  "set": "dev",
+  "text": "What must be true before starting the Hydraulic Power Unit?",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "fluid level",
+   "IV-21",
+   "(emergency stop|e-stop)",
+   "RESET"
+  ],
+  "must_cite": [
+   "operator_manual.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "operator_manual.pdf",
+    "contains": "Before starting, verify"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "Q2",
+  "set": "dev",
+  "text": "What is the current normal operating pressure for the HPU, and under what conditions does that apply?",
+  "category": "numeric+revision",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "200 bar",
+   "180 bar",
+   "3\\.2"
+  ],
+  "must_cite": [
+   "operator_manual.pdf",
+   "ECN-1042.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "operator_manual.pdf",
+    "contains": "normal operating pressure for software revision 3.2"
+   },
+   {
+    "doc": "ECN-1042.pdf",
+    "contains": "setpoint is revised"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "Q3",
+  "set": "dev",
+  "text": "What does alarm A17 indicate, and what are its possible causes?",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "below 150 bar",
+   "IV-21",
+   "fluid",
+   "signal invalid"
+  ],
+  "must_cite": [
+   "alarm_reference.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "alarm_reference.pdf",
+    "contains": "Alarm: A17"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "Q4",
+  "set": "dev",
+  "text": "Is PS-04 the same component as PS-04A?",
+  "category": "entity",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "No",
+   "(distinct|supersede)"
+  ],
+  "must_cite": [
+   "ECN-1042.pdf",
+   "component_register.xlsx"
+  ],
+  "gold": [
+   {
+    "doc": "ECN-1042.pdf",
+    "contains": "replaced by pressure sensor PS-04A"
+   },
+   {
+    "doc": "component_register.xlsx",
+    "contains": "as printed\\): PS-04A \\|"
+   },
+   {
+    "doc": "component_register.xlsx",
+    "contains": "as printed\\): PS-04 \\|"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "Q5",
+  "set": "dev",
+  "text": "Which document introduced the change from PS-04 to PS-04A?",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "ECN-1042"
+  ],
+  "must_cite": [
+   "ECN-1042.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "ECN-1042.pdf",
+    "contains": "replaced by pressure sensor PS-04A"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "Q6",
+  "set": "dev",
+  "text": "Which components connect directly to the HCS controller, according to the hydraulic schematic?",
+  "category": "diagram",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "PS-04A",
+   "IV-21"
+  ],
+  "must_cite": [
+   "system_diagram_hydraulic.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "system_diagram_hydraulic.pdf",
+    "contains": "purple line"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "Q7",
+  "set": "dev",
+  "text": "What action is required if alarm A17 persists for more than 10 seconds?",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "Procedure 4\\.7",
+   "close IV-21"
+  ],
+  "must_cite": [
+   "maintenance_manual.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "maintenance_manual.pdf",
+    "contains": "persists for more than 10 seconds"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "Q8",
+  "set": "dev",
+  "text": "Under what circumstances must the controller not be reset?",
+  "category": "multi-passage",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "50 bar",
+   "above"
+  ],
+  "must_cite": [
+   "operator_manual.pdf",
+   "maintenance_manual.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "operator_manual.pdf",
+    "contains": "Do not reset the PLC-03"
+   },
+   {
+    "doc": "maintenance_manual.pdf",
+    "contains": "Do NOT reset"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "Q9",
+  "set": "dev",
+  "text": "What was the operating pressure threshold before software revision 3.2, and what changed it?",
+  "category": "revision",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "180 bar",
+   "ECN-1042"
+  ],
+  "must_cite": [
+   "operator_manual.pdf",
+   "ECN-1042.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "operator_manual.pdf",
+    "contains": "prior to 3\\.2"
+   },
+   {
+    "doc": "ECN-1042.pdf",
+    "contains": "setpoint is revised"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "Q10",
+  "set": "dev",
+  "text": "Which alarm is associated with a pressure sensor reading below 150 bar?",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "A17"
+  ],
+  "must_cite": [
+   "alarm_reference.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "alarm_reference.pdf",
+    "contains": "Alarm: A17"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "Q11",
+  "set": "dev",
+  "text": "According to the component register, what is the location of the isolation valve IV-21?",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "Hydraulic Module"
+  ],
+  "must_cite": [
+   "component_register.xlsx"
+  ],
+  "gold": [
+   {
+    "doc": "component_register.xlsx",
+    "contains": "as printed\\): IV-21 \\|"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "Q12",
+  "set": "dev",
+  "text": "Does the training slide deck introduce any component or alarm not found in the manuals?",
+  "category": "multi-passage",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "Auxiliary Reservoir"
+  ],
+  "must_cite": [
+   "training_slide_excerpt.pptx"
+  ],
+  "gold": [
+   {
+    "doc": "training_slide_excerpt.pptx",
+    "contains": "Auxiliary Reservoir"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "Q13",
+  "set": "dev",
+  "text": "What sensor ID appears on the diagnostics screenshot, and does it match a known component",
+  "category": "screenshot",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "P\\.S\\.04-A",
+   "PS-04A",
+   "(formatting|separator|punctuation)"
+  ],
+  "must_cite": [
+   "screen_03_diagnostics.png",
+   "component_register.xlsx"
+  ],
+  "gold": [
+   {
+    "doc": "screen_03_diagnostics.png",
+    "contains": "P\\.S\\.04-A"
+   },
+   {
+    "doc": "component_register.xlsx",
+    "contains": "as printed\\): PS-04A \\|"
+   }
+  ],
+  "forbid": [
+   "no (hmi )?screenshot",
+   "cannot be determined"
+  ]
+ },
+ {
+  "id": "Q14",
+  "set": "dev",
+  "text": "Per the revision history, when did software revision 3.2 take effect, and what changed alongside it?",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "2025-09-30",
+   "180",
+   "200"
+  ],
+  "must_cite": [
+   "revision_history.xlsx"
+  ],
+  "gold": [
+   {
+    "doc": "revision_history.xlsx",
+    "contains": "Software Revision: 3\\.2 \\|"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "Q15",
+  "set": "dev",
+  "text": "What does sensor_ps04a_threshold_bar in the configuration export correspond to in the operator manual's terminology?",
+  "category": "terminology",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "PS-04A",
+   "200 bar",
+   "(setpoint|normal)"
+  ],
+  "must_cite": [
+   "configuration_export.json"
+  ],
+  "gold": [
+   {
+    "doc": "configuration_export.json",
+    "contains": "sensor_ps04a_threshold_bar"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "Q16",
+  "set": "dev",
+  "text": "Does the 200 bar threshold apply to all Aegis HCS units, or only some?",
+  "category": "revision",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "(3\\.2 or later|≥ ?3\\.2)"
+  ],
+  "must_cite": [
+   "ECN-1042.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "ECN-1042.pdf",
+    "contains": "PS-04 remains installed"
+   },
+   {
+    "doc": "operator_manual.pdf",
+    "contains": "Applies to software revision 3\\.2"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "Q17",
+  "set": "dev",
+  "text": "Is PS-04 the same as PS-40?",
+  "category": "entity",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "No",
+   "coolant"
+  ],
+  "must_cite": [
+   "component_register.xlsx"
+  ],
+  "gold": [
+   {
+    "doc": "component_register.xlsx",
+    "contains": "as printed\\): PS-40 \\|"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "Q18",
+  "set": "dev",
+  "text": "What was the pressure limit before revision 3.2?",
+  "category": "revision/ambiguous",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "180 bar"
+  ],
+  "must_cite": [
+   "operator_manual.pdf",
+   "ECN-1042.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "operator_manual.pdf",
+    "contains": "prior to 3\\.2"
+   },
+   {
+    "doc": "ECN-1042.pdf",
+    "contains": "setpoint is revised"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "Q19",
+  "set": "dev",
+  "text": "What is the maximum continuous operating temperature of PS-04A?",
+  "category": "unanswerable",
+  "expected_status": [
+   "INSUFFICIENT_EVIDENCE"
+  ],
+  "must_contain": [],
+  "must_cite": [],
+  "gold": [],
+  "forbid": [
+   "\\d+\\s*°\\s*C"
+  ]
+ },
+ {
+  "id": "Q20",
+  "set": "dev",
+  "text": "What is the calibration interval for the electrical system diagram's voltage sensor?",
+  "category": "unanswerable",
+  "expected_status": [
+   "INSUFFICIENT_EVIDENCE"
+  ],
+  "must_contain": [],
+  "must_cite": [],
+  "gold": [],
+  "forbid": [
+   "\\d+\\s*(months?|days?|years?|hours?)"
+  ]
+ },
+ {
+  "id": "Q21",
+  "set": "dev",
+  "text": "Who approved engineering bulletin ECN-1058?",
+  "category": "unanswerable",
+  "expected_status": [
+   "INSUFFICIENT_EVIDENCE"
+  ],
+  "must_contain": [],
+  "must_cite": [],
+  "gold": [],
+  "forbid": [
+   "approved by [A-Z]"
+  ]
+ },
+ {
+  "id": "Q22",
+  "set": "dev",
+  "text": "What is the mean time between failures for the isolation valve IV-21?",
+  "category": "unanswerable",
+  "expected_status": [
+   "INSUFFICIENT_EVIDENCE"
+  ],
+  "must_contain": [],
+  "must_cite": [],
+  "gold": [],
+  "forbid": [
+   "\\d+\\s*(hours|cycles)"
+  ]
+ },
+ {
+  "id": "Q23",
+  "set": "dev",
+  "text": "Is the Aegis Series-7 HCS compatible with a 3-phase 400V supply?",
+  "category": "unanswerable",
+  "expected_status": [
+   "INSUFFICIENT_EVIDENCE"
+  ],
+  "must_contain": [],
+  "must_cite": [],
+  "gold": [],
+  "forbid": [
+   "^Yes\\b"
+  ]
+ },
+ {
+  "id": "P1",
+  "set": "para",
+  "text": "Which preconditions must be satisfied prior to switching on the hydraulic pack?",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "fluid level",
+   "IV-21",
+   "RESET"
+  ],
+  "must_cite": [
+   "operator_manual.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "operator_manual.pdf",
+    "contains": "Before starting, verify"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "P2",
+  "set": "para",
+  "text": "What pressure should the HP unit normally run at on firmware 3.2.1?",
+  "category": "numeric+revision",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "200 bar"
+  ],
+  "must_cite": [
+   "operator_manual.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "operator_manual.pdf",
+    "contains": "normal operating pressure for software revision 3.2"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "P3",
+  "set": "para",
+  "text": "Explain the meaning of the A17 alarm and what usually triggers it.",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "below 150 bar",
+   "IV-21"
+  ],
+  "must_cite": [
+   "alarm_reference.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "alarm_reference.pdf",
+    "contains": "Alarm: A17"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "P4",
+  "set": "para",
+  "text": "Are PS04A and PS-04 just two names for one sensor?",
+  "category": "entity",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "No",
+   "supersede"
+  ],
+  "must_cite": [
+   "ECN-1042.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "ECN-1042.pdf",
+    "contains": "replaced by pressure sensor PS-04A"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "P5",
+  "set": "para",
+  "text": "Which ECN replaced the old pressure transducer with the new one?",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "ECN-1042"
+  ],
+  "must_cite": [
+   "ECN-1042.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "ECN-1042.pdf",
+    "contains": "replaced by pressure sensor PS-04A"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "P6",
+  "set": "para",
+  "text": "What do I do if A17 stays active longer than ten seconds?",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "Procedure 4\\.7"
+  ],
+  "must_cite": [
+   "maintenance_manual.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "maintenance_manual.pdf",
+    "contains": "persists for more than 10 seconds"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "P7",
+  "set": "para",
+  "text": "Can I restart the PLC while the circuit is still pressurised at 80 bar?",
+  "category": "multi-passage",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "50 bar",
+   "(not|block)"
+  ],
+  "must_cite": [
+   "operator_manual.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "operator_manual.pdf",
+    "contains": "Do not reset the PLC-03"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "P8",
+  "set": "para",
+  "text": "Where is the isolation valve physically installed?",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "Hydraulic Module"
+  ],
+  "must_cite": [
+   "component_register.xlsx"
+  ],
+  "gold": [
+   {
+    "doc": "component_register.xlsx",
+    "contains": "as printed\\): IV-21 \\|"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "P9",
+  "set": "para",
+  "text": "Which alarm fires when discharge pressure exceeds 220 bar?",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "A18"
+  ],
+  "must_cite": [
+   "alarm_reference.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "alarm_reference.pdf",
+    "contains": "Alarm: A18"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "P10",
+  "set": "para",
+  "text": "When was software 3.2 released?",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "2025-09-30"
+  ],
+  "must_cite": [
+   "revision_history.xlsx"
+  ],
+  "gold": [
+   {
+    "doc": "revision_history.xlsx",
+    "contains": "Software Revision: 3\\.2 \\|"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "P11",
+  "set": "para",
+  "text": "What is the mean time to repair for IV-21?",
+  "category": "unanswerable",
+  "expected_status": [
+   "INSUFFICIENT_EVIDENCE"
+  ],
+  "must_contain": [],
+  "must_cite": [],
+  "gold": [],
+  "forbid": [
+   "\\d+\\s*(hours|minutes)"
+  ]
+ },
+ {
+  "id": "P12",
+  "set": "para",
+  "text": "What is the permitted operating temperature range of the HPU?",
+  "category": "unanswerable",
+  "expected_status": [
+   "INSUFFICIENT_EVIDENCE"
+  ],
+  "must_contain": [],
+  "must_cite": [],
+  "gold": [],
+  "forbid": [
+   "\\d+\\s*°\\s*C"
+  ]
+ },
+ {
+  "id": "P13",
+  "set": "para",
+  "text": "What is the flash point of Aegis HydroFluid-32?",
+  "category": "noise-doc answerable",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "210"
+  ],
+  "must_cite": [
+   "safety_data_sheet_hydraulic_fluid.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "safety_data_sheet_hydraulic_fluid.pdf",
+    "contains": "Flash point"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "P14",
+  "set": "para",
+  "text": "Is 175 bar a normal reading for the HP unit on a 3.2.1 controller?",
+  "category": "conflict",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "200 bar"
+  ],
+  "must_cite": [
+   "operator_manual.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "operator_manual.pdf",
+    "contains": "normal operating pressure for software revision 3.2"
+   },
+   {
+    "doc": "site_survey_notes.docx",
+    "contains": "175 bar"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "P15",
+  "set": "para",
+  "text": "Does the PLC-03 firmware allow a reset at 60 bar?",
+  "category": "multi-passage",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "50 bar",
+   "(block|not)"
+  ],
+  "must_cite": [
+   "configuration_export.json"
+  ],
+  "gold": [
+   {
+    "doc": "configuration_export.json",
+    "contains": "max_pressure_bar_allowed_for_reset"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "P16",
+  "set": "para",
+  "text": "Who signed off ECN-1042?",
+  "category": "unanswerable",
+  "expected_status": [
+   "INSUFFICIENT_EVIDENCE"
+  ],
+  "must_contain": [],
+  "must_cite": [],
+  "gold": [],
+  "forbid": [
+   "signed off by [A-Z]"
+  ]
+ },
+ {
+  "id": "P17",
+  "set": "para",
+  "text": "What does the term 'hydraulic pack' refer to?",
+  "category": "terminology",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "(HPU|Hydraulic Power)"
+  ],
+  "must_cite": [
+   "training_slide_excerpt.pptx"
+  ],
+  "gold": [
+   {
+    "doc": "training_slide_excerpt.pptx",
+    "contains": "hydraulic pack"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "P18",
+  "set": "para",
+  "text": "What is the normal pressure for PS-40?",
+  "category": "entity-trap",
+  "expected_status": [
+   "INSUFFICIENT_EVIDENCE"
+  ],
+  "must_contain": [],
+  "must_cite": [],
+  "gold": [],
+  "forbid": [
+   "PS-40[^.]{0,40}(normal|operating) pressure (is|of) \\d"
+  ]
+ },
+ {
+  "id": "H1",
+  "set": "held",
+  "text": "List the interlock conditions that have to be met to start up the HPU.",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "fluid level",
+   "IV-21",
+   "RESET"
+  ],
+  "must_cite": [
+   "operator_manual.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "operator_manual.pdf",
+    "contains": "Before starting, verify"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "H2",
+  "set": "held",
+  "text": "What's the nominal discharge pressure on a unit running software 3.1?",
+  "category": "revision",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "180 bar"
+  ],
+  "must_cite": [
+   "operator_manual.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "operator_manual.pdf",
+    "contains": "prior to 3\\.2"
+   }
+  ],
+  "forbid": [
+   "200 bar is the (normal|nominal) pressure on 3\\.1"
+  ]
+ },
+ {
+  "id": "H3",
+  "set": "held",
+  "text": "Why would alarm A19 be raised?",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "wiring",
+   "drift"
+  ],
+  "must_cite": [
+   "alarm_reference.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "alarm_reference.pdf",
+    "contains": "Alarm: A19"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "H4",
+  "set": "held",
+  "text": "Is the HPU the same thing as the hydraulic unit?",
+  "category": "entity",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "(yes|same)"
+  ],
+  "must_cite": [
+   "operator_manual.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "operator_manual.pdf",
+    "contains": "Hydraulic Unit or"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "H5",
+  "set": "held",
+  "text": "What does terminal block TB-7 connect to in the wiring diagram?",
+  "category": "diagram",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "J-14"
+  ],
+  "must_cite": [
+   "wiring_diagram.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "wiring_diagram.pdf",
+    "contains": "connected to"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "H6",
+  "set": "held",
+  "text": "Was ECN-1058 a hardware change?",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "(no|not|documentation)"
+  ],
+  "must_cite": [
+   "ECN-1058.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "ECN-1058.pdf",
+    "contains": "documentation correction only"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "H7",
+  "set": "held",
+  "text": "What is the A18 alarm threshold?",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "220 bar"
+  ],
+  "must_cite": [
+   "alarm_reference.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "alarm_reference.pdf",
+    "contains": "Alarm: A18"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "H8",
+  "set": "held",
+  "text": "What alarm limits are configured for PS-04A?",
+  "category": "structured",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "150",
+   "220"
+  ],
+  "must_cite": [
+   "configuration_export.json"
+  ],
+  "gold": [
+   {
+    "doc": "configuration_export.json",
+    "contains": "sensor_ps04a_alarm_low_bar"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "H9",
+  "set": "held",
+  "text": "Does software 3.3 change any setpoints?",
+  "category": "revision",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "(planned|no sensor or setpoint)"
+  ],
+  "must_cite": [
+   "revision_history.xlsx"
+  ],
+  "gold": [
+   {
+    "doc": "revision_history.xlsx",
+    "contains": "Software Revision: 3\\.3"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "H10",
+  "set": "held",
+  "text": "How long does a transient A17 have before shutdown becomes mandatory?",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "10 s"
+  ],
+  "must_cite": [
+   "maintenance_manual.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "maintenance_manual.pdf",
+    "contains": "persists for more than 10 seconds"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "H11",
+  "set": "held",
+  "text": "What is the rated flow rate of the HPU pump?",
+  "category": "unanswerable",
+  "expected_status": [
+   "INSUFFICIENT_EVIDENCE"
+  ],
+  "must_contain": [],
+  "must_cite": [],
+  "gold": [],
+  "forbid": [
+   "\\d+\\s*(l/min|lpm|gpm)"
+  ]
+ },
+ {
+  "id": "H12",
+  "set": "held",
+  "text": "Which pressure sensor does a unit on firmware 3.0 use?",
+  "category": "revision",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "PS-04\\b"
+  ],
+  "must_cite": [
+   "component_register.xlsx"
+  ],
+  "gold": [
+   {
+    "doc": "component_register.xlsx",
+    "contains": "as printed\\): PS-04 \\|"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "H13",
+  "set": "held",
+  "text": "Is it safe to reset the controller at 30 bar?",
+  "category": "multi-passage",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "(below 50|30 bar)"
+  ],
+  "must_cite": [
+   "maintenance_manual.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "maintenance_manual.pdf",
+    "contains": "Do NOT reset"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "H14",
+  "set": "held",
+  "text": "Where is the HPU located?",
+  "category": "direct",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "Skid A"
+  ],
+  "must_cite": [
+   "component_register.xlsx"
+  ],
+  "gold": [
+   {
+    "doc": "component_register.xlsx",
+    "contains": "as printed\\): HPU \\|"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "H15",
+  "set": "held",
+  "text": "What viscosity grade is the hydraulic fluid?",
+  "category": "noise-doc answerable",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "VG ?32"
+  ],
+  "must_cite": [
+   "safety_data_sheet_hydraulic_fluid.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "safety_data_sheet_hydraulic_fluid.pdf",
+    "contains": "Viscosity"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "S1",
+  "set": "scr",
+  "text": "On the HMI alarm screen, has A17 been active long enough to require shutdown?",
+  "category": "screenshot+rule",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "14",
+   "10",
+   "4\\.7"
+  ],
+  "must_cite": [
+   "screen_02_alarms.png",
+   "maintenance_manual.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "screen_02_alarms.png",
+    "contains": "active for"
+   },
+   {
+    "doc": "maintenance_manual.pdf",
+    "contains": "persists for more than 10 seconds"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "S2",
+  "set": "scr",
+  "text": "What pressure does the home screen display, and is it consistent with the manual?",
+  "category": "screenshot+numeric",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "200 bar",
+   "3\\.2"
+  ],
+  "must_cite": [
+   "screen_01_home.png"
+  ],
+  "gold": [
+   {
+    "doc": "screen_01_home.png",
+    "contains": "200 bar"
+   }
+  ],
+  "forbid": [
+   "180 bar is the (normal|expected)"
+  ]
+ },
+ {
+  "id": "S3",
+  "set": "scr",
+  "text": "Does the last-calibrated date on the diagnostics screen match the calibration record?",
+  "category": "cross-source",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "2026-01-09"
+  ],
+  "must_cite": [
+   "screen_03_diagnostics.png",
+   "scanned_appendix_calibration.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "screen_03_diagnostics.png",
+    "contains": "Last Calibrated"
+   },
+   {
+    "doc": "scanned_appendix_calibration.pdf",
+    "contains": "2026-01-09"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "S4",
+  "set": "scr",
+  "text": "Which firmware revision does the diagnostics screen report?",
+  "category": "screenshot",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "3\\.2\\.1"
+  ],
+  "must_cite": [
+   "screen_03_diagnostics.png"
+  ],
+  "gold": [
+   {
+    "doc": "screen_03_diagnostics.png",
+    "contains": "Firmware"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "S5",
+  "set": "scr",
+  "text": "What mA raw reading does the HMI show for the pressure sensor?",
+  "category": "screenshot",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "14\\.8"
+  ],
+  "must_cite": [
+   "screen_03_diagnostics.png"
+  ],
+  "gold": [
+   {
+    "doc": "screen_03_diagnostics.png",
+    "contains": "Raw Reading"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "S6",
+  "set": "scr",
+  "text": "What is the sensor's calibration interval according to the diagnostics screen?",
+  "category": "unanswerable",
+  "expected_status": [
+   "INSUFFICIENT_EVIDENCE"
+  ],
+  "must_contain": [],
+  "must_cite": [],
+  "gold": [],
+  "forbid": [
+   "\\d+\\s*(months?|days?|years?)"
+  ]
+ },
+ {
+  "id": "AL1",
+  "set": "alarm",
+  "text": "What does alarm A19 indicate, and what action is required?",
+  "category": "alarm-combined",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "signal invalid",
+   "Replace sensor per Maintenance Manual Section 6"
+  ],
+  "must_cite": [
+   "alarm_reference.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "alarm_reference.pdf",
+    "contains": "Alarm: A19"
+   }
+  ],
+  "forbid": [
+   "Stop the HPU",
+   "Do not restart until pressure relief"
+  ]
+ },
+ {
+  "id": "AL2",
+  "set": "alarm",
+  "text": "What should I do when alarm A19 occurs?",
+  "category": "alarm-action",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "Replace sensor per Maintenance Manual Section 6"
+  ],
+  "must_cite": [
+   "alarm_reference.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "alarm_reference.pdf",
+    "contains": "Alarm: A19"
+   }
+  ],
+  "forbid": [
+   "Stop the HPU",
+   "Do not restart until pressure relief"
+  ]
+ },
+ {
+  "id": "AL3",
+  "set": "alarm",
+  "text": "What action is required for A18?",
+  "category": "alarm-action",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "Stop the HPU",
+   "Do not restart until pressure relief is verified"
+  ],
+  "must_cite": [
+   "alarm_reference.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "alarm_reference.pdf",
+    "contains": "Alarm: A18"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "AL4",
+  "set": "alarm",
+  "text": "Can I restart the HPU after A19?",
+  "category": "alarm-restart",
+  "expected_status": [
+   "INSUFFICIENT_EVIDENCE"
+  ],
+  "must_contain": [],
+  "must_cite": [],
+  "gold": [],
+  "forbid": [
+   "Stop the HPU",
+   "Do not restart until pressure relief",
+   "(you may|you can|is permitted to|safe to) restart"
+  ]
+ },
+ {
+  "id": "AL5",
+  "set": "alarm",
+  "text": "Can I restart the HPU after A18?",
+  "category": "alarm-restart",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "Do not restart until pressure relief is verified"
+  ],
+  "must_cite": [
+   "alarm_reference.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "alarm_reference.pdf",
+    "contains": "Alarm: A18"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "AL6",
+  "set": "alarm",
+  "text": "What causes alarm A19?",
+  "category": "alarm-causes",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "wiring fault",
+   "drift"
+  ],
+  "must_cite": [
+   "alarm_reference.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "alarm_reference.pdf",
+    "contains": "Alarm: A19"
+   }
+  ],
+  "forbid": [
+   "Replace sensor"
+  ]
+ },
+ {
+  "id": "AL7",
+  "set": "alarm",
+  "text": "What does alarm A-1042 mean?",
+  "category": "alarm-unverified",
+  "expected_status": [
+   "INSUFFICIENT_EVIDENCE"
+  ],
+  "must_contain": [],
+  "must_cite": [],
+  "gold": [],
+  "forbid": [
+   "indicates:",
+   "Possible causes"
+  ]
+ },
+ {
+  "id": "AL8",
+  "set": "alarm",
+  "text": "What does alarm A05 mean?",
+  "category": "alarm-unverified",
+  "expected_status": [
+   "INSUFFICIENT_EVIDENCE"
+  ],
+  "must_contain": [],
+  "must_cite": [],
+  "gold": [],
+  "forbid": [
+   "indicates:"
+  ]
+ },
+ {
+  "id": "AL9",
+  "set": "alarm",
+  "text": "What action is required for A17?",
+  "category": "alarm-action",
+  "expected_status": [
+   "ANSWERED",
+   "ANSWERED_WITH_CAVEATS"
+  ],
+  "must_contain": [
+   "4\\.7",
+   "10 s"
+  ],
+  "must_cite": [
+   "alarm_reference.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "alarm_reference.pdf",
+    "contains": "Alarm: A17"
+   }
+  ],
+  "forbid": []
+ },
+ {
+  "id": "AL10",
+  "set": "alarm",
+  "text": "What does alarm A19 mean?",
+  "category": "alarm-meaning",
+  "expected_status": [
+   "ANSWERED"
+  ],
+  "must_contain": [
+   "signal invalid"
+  ],
+  "must_cite": [
+   "alarm_reference.pdf"
+  ],
+  "gold": [
+   {
+    "doc": "alarm_reference.pdf",
+    "contains": "Alarm: A19"
+   }
+  ],
+  "forbid": [
+   "Replace sensor",
+   "wiring"
+  ]
+ }
+]

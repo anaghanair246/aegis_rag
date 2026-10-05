@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aegis Series-7 Hydraulic Control System - Operator Manual (v1, legacy export)</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; max-width: 780px; margin: 40px auto; color: #222; line-height: 1.5; }
+  h1 { font-size: 22px; border-bottom: 2px solid #444; padding-bottom: 6px; }
+  h2 { font-size: 17px; color: #333; margin-top: 28px; }
+  .meta { color: #777; font-size: 12px; font-style: italic; }
+  .warn { background: #fff3f3; border-left: 4px solid #a33; padding: 8px 12px; margin: 12px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px; }
+  td, th { border: 1px solid #999; padding: 6px 8px; text-align: left; }
+  th { background: #eee; }
+  .banner { background: #f0e9d8; border: 1px solid #c9b98a; padding: 8px 12px; font-size: 12px; margin-bottom: 20px; }
+</style>
+</head>
+<body>
+
+<div class="banner">
+  Exported from the legacy Aegis documentation CMS on 2024-03-01. This is <b>Revision 1</b> of the
+  Operator Manual. A newer manual (AEG-OM-700, current revision) supersedes most of this content
+  as of software revision 3.2 &mdash; see the Engineering Change Notices in this package before
+  relying on any figure below.
+</div>
+
+<h1>Aegis Series-7 Hydraulic Control System &mdash; Operator Manual</h1>
+<p class="meta">Document AEG-OM-700, Revision 1 (superseded). Applies to software revisions 3.0 and 3.1 only.</p>
+
+<h2>1. Overview</h2>
+<p>The Aegis Series-7 Hydraulic Control System provides closed-loop hydraulic pressure regulation
+for industrial press lines. The system is built around the Hydraulic Power Pack, which supplies
+pressurized fluid to the press circuit under the supervision of the Aegis Controller.</p>
+
+<h2>2. Key Components</h2>
+<table>
+<tr><th>Reference</th><th>Component</th><th>Function</th></tr>
+<tr><td>Hydraulic Power Pack</td><td>Hydraulic Power Pack (HPU)</td><td>Generates and regulates hydraulic pressure</td></tr>
+<tr><td>IV-21</td><td>Isolation Valve 21</td><td>Isolates the HPU from the press circuit</td></tr>
+<tr><td>PS-04</td><td>Pressure Sensor 04</td><td>Reports HPU discharge pressure to the controller</td></tr>
+</table>
+
+<h2>4. Starting the Hydraulic Power Pack</h2>
+<p>Before starting, verify:</p>
+<ul>
+  <li>Hydraulic fluid level is within the normal band.</li>
+  <li>Isolation valve IV-21 is open.</li>
+  <li>Emergency stop is reset.</li>
+</ul>
+<div class="warn">
+  <b>WARNING:</b> Do not start the unit with the maintenance access panel removed.
+</div>
+<ol>
+  <li>Turn the POWER selector to ON.</li>
+  <li>Press START.</li>
+  <li>Verify pressure reaches <b>180 bar</b>.</li>
+</ol>
+
+<h2>5. Normal Operating Ranges</h2>
+<p>Normal HPU discharge pressure is 180 bar, as measured by pressure sensor PS-04.</p>
+
+<h2>6. Alarms</h2>
+<p>See the Aegis Alarm Reference for alarm A17 (Hydraulic Pressure Low) and related codes.</p>
+
+<hr>
+<p class="meta">
+This legacy export does not reflect ECN-1042 (PS-04 to PS-04A sensor change and pressure setpoint
+update to 200 bar, effective software revision 3.2) or ECN-1058. Do not use this document as the
+sole reference for units running software revision 3.2 or later.
+</p>
+
+</body>
+</html>
